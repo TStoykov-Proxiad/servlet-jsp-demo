@@ -5,12 +5,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>bg.proxiad.cources.web</groupId>
-	<artifactId>servlet-jsp-demo</artifactId>
+	<artifactId>servlet-jsp-demo-fail</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
 
 	<properties>
-		<java.version>11</java.version>
+		<java.version>1.8</java.version>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 	</properties>
@@ -39,10 +39,9 @@
     			<version>3.3.2</version>
 			</plugin>
 			<plugin>
-				<groupId>org.eclipse.jetty</groupId>
-    			<artifactId>jetty-maven-plugin</artifactId>
-    			<version>11.0.7</version>
-
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>maven-jetty-plugin</artifactId>
+				<version>6.1.4</version>
 				<dependencies>
 					<dependency>
 						<groupId>log4j</groupId>

@@ -21,6 +21,10 @@ public class GreetingServlet extends HttpServlet {
 
     resp.setContentType("text/html");
     resp.setCharacterEncoding("UTF-8");
-    resp.getWriter().append(format("<html><body><h1>%s, %s</h1><p>Counter: %s</p></body></html>",greeting, name, allCount));
-    }
+    resp.getWriter()
+        .append(
+            format(
+                "<html><body><h1>%s, %s</h1><p>Counter: %s</p></body></html>",
+                greeting, name, allCount));
+  }
 }

@@ -1,0 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hello from the JSP</title>
+</head>
+<body>
+<p>${requestScope.greeting} ${param.name}</p>
+</body>
+</html>
