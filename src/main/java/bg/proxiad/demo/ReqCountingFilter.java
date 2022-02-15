@@ -8,6 +8,8 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.annotation.WebFilter;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 
 @WebFilter("/*")
 public class ReqCountingFilter implements Filter {
@@ -26,6 +28,12 @@ public class ReqCountingFilter implements Filter {
     Long allCount = (Long) request.getServletContext().getAttribute(COUNTER_ATTR);
     allCount++;
     request.getServletContext().setAttribute(COUNTER_ATTR, allCount);
+    HttpSession session = ((HttpServletRequest) request).getSession();
+    long count = 0l;
+    if (session.getAttribute("count") != null) {
+      count = (long) session.getAttribute("count");
+    }
+    session.setAttribute("count", count + 1);
 
     chain.doFilter(request, response);
   }
