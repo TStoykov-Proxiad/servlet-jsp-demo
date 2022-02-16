@@ -28,8 +28,9 @@ public class ReqCountingFilter implements Filter {
     Long allCount = (Long) request.getServletContext().getAttribute(COUNTER_ATTR);
     allCount++;
     request.getServletContext().setAttribute(COUNTER_ATTR, allCount);
+
     HttpSession session = ((HttpServletRequest) request).getSession();
-    long count = 0l;
+    long count = 0L;
     if (session.getAttribute("count") != null) {
       count = (long) session.getAttribute("count");
     }
