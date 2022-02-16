@@ -19,6 +19,12 @@
 			The task is the same as the above one, but a JSP has to be used to render the greeting
 		</li>
 		<li>
+			<a href="/count-my-requests-this-link">My requests for this link count</a> -
+			The code behind this link is expected to be implemented by you :-)</br>
+			Every time you click on this link you have to see as output how many times 
+			you've clicked the link (Hint: HttpSession)
+		</li>
+		<li>
 			<a href="/count-my-requests">My requests count</a> -
 			The code behind this link is expected to be implemented by you :-)</br>
 			Every time you click on this link you have to see as output how many times 
